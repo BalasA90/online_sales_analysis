@@ -7,9 +7,9 @@ if __name__ == "__main__":
     manager = ProductManager()
 
      # Produse disponibile
-    manager.add_product(Product("Dulap", 2900, 25))
-    manager.add_product(Product("Pat", 3300, 9))
-    manager.add_product(Product("Fotoliu", 550, 39))
+    manager.add_product(Product("Canapea", 2900, 25))
+    manager.add_product(Product("Pat", 4300, 9))
+    manager.add_product(Product("Fotoliu", 550, 19))
 
      # Instanță coș
     cart = Cart()
