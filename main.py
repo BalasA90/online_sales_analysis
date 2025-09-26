@@ -1,17 +1,24 @@
 
 from product import Product
 from product_manager import ProductManager
+from cart import Cart
 
 if __name__ == "__main__":
     manager = ProductManager()
 
-    # Adăugăm produse
+     # Produse disponibile
     manager.add_product(Product("Dulap", 2900, 25))
     manager.add_product(Product("Pat", 3300, 9))
     manager.add_product(Product("Fotoliu", 550, 39))
 
-    # Afișăm produse
-    manager.show_products()
+     # Instanță coș
+    cart = Cart()
 
-    # Valoarea totală
-    print("Valoarea totală a inventarului:", manager.total_inventory_value(), "RON")
+    # Adăugăm 3 produse random
+    cart.add_to_cart(manager.products[0])
+    cart.add_to_cart(manager.products[1])
+    cart.add_to_cart(manager.products[2])
+
+    # Afișăm coșul
+    cart.show_cart()
+    print("Valoarea totală a coșului:", cart.total_cart_value(), "RON")
